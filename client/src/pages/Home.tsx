@@ -5,25 +5,25 @@ type Product = { id: string; name: string; category: string; price: number; desc
 
 const images = {
   hero: "https://acdn-us.mitiendanube.com/stores/006/854/176/themes/morelia/2-slide-1764267598356-4667402967-b7a826bb2bbb8cc7c48bdfbf111b5c5d1764267624-480-0.webp",
-  p1: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/33514d32274ff30d38cbe2edd5ef337f-5ae61bcbc813064e9e17633872785005-480-0.webp",
-  p2: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/33869b32eacd6b5ca710c9ed53b1b3c4-d06c96a0b36194f72517633873878522-480-0.webp",
-  p3: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/5bd07e3d3bf5fd88d547c658abcaf196-3fdedad009b6be46df17633872477626-480-0.webp",
-  p4: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/6c820353f76f1fe2879562373b3a5998-35a55420182174cc5a17633874047475-480-0.webp",
-  p5: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/71765912eeac864814fdb1eb827bd42c-f35a1ebb4aea2b653217633872760714-480-0.webp",
+  p1: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/33869b32eacd6b5ca710c9ed53b1b3c4-d06c96a0b36194f72517633873878522-480-0.webp",
+  p2: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/33514d32274ff30d38cbe2edd5ef337f-5ae61bcbc813064e9e17633872785005-480-0.webp",
+  p3: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/71765912eeac864814fdb1eb827bd42c-f35a1ebb4aea2b653217633872760714-480-0.webp",
+  p4: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/990e23bc0fe3219c4f769ef3dbd781ee-5c2bdd52586172cc2117633872736731-480-0.webp",
+  p5: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/6c820353f76f1fe2879562373b3a5998-35a55420182174cc5a17633874047475-480-0.webp",
   p6: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/82f12f30242c78898912cfef7f48c491-8c170d149916ee2bd617633872615083-480-0.webp",
-  p7: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/990e23bc0fe3219c4f769ef3dbd781ee-5c2bdd52586172cc2117633872736731-480-0.webp",
-  p8: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/995b67f7760b53483765ed09d9fcf151-4c9aa18b91401bb99317633872568540-480-0.webp",
+  p7: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/995b67f7760b53483765ed09d9fcf151-4c9aa18b91401bb99317633872568540-480-0.webp",
+  p8: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/5bd07e3d3bf5fd88d547c658abcaf196-3fdedad009b6be46df17633872477626-480-0.webp",
 };
 
 const products: Product[] = [
-  { id: "kit-italia", name: "Kit La Mia Italia — 10 marmitinhas", category: "Kits marmitinhas", price: 145, description: "Uma viagem pela Itália em dez porções práticas e cheias de sabor.", image: images.p1, badge: "Mais pedido" },
-  { id: "kit-fit", name: "Kit Fit Emagreça com Sabor — 16 marmitinhas", category: "Kits marmitinhas", price: 235, description: "Equilíbrio, praticidade e comida de verdade para sua rotina.", image: images.p2, badge: "Fit" },
-  { id: "kit-dia", name: "Kit Dia a Dia — 30 marmitinhas", category: "Kits marmitinhas", price: 440, description: "Seu mês mais leve, organizado e saboroso com porções prontas.", image: images.p3, badge: "Frete grátis" },
-  { id: "kit-mais", name: "Kit As Mais Pedidas — 20 marmitinhas", category: "Kits marmitinhas", price: 290, description: "As favoritas da casa reunidas em um kit para toda a semana.", image: images.p4 },
-  { id: "strogonoff", name: "Strogonoff de frango — 350g", category: "Marmitas variadas", price: 14.75, description: "Frango macio ao molho cremoso, acompanhado de arroz e batata palha.", image: images.p5 },
-  { id: "frango-colorido", name: "Frango colorido — 350g", category: "Marmitas variadas", price: 14.75, description: "Uma combinação caseira com legumes, arroz soltinho e tempero especial.", image: images.p6 },
-  { id: "parmegiana", name: "Filé de frango à parmegiana — 350g", category: "Marmitas variadas", price: 14.75, description: "Filé empanado, molho de tomate e queijo gratinado na medida.", image: images.p7 },
-  { id: "ragu", name: "Espaguete com ragu de linguiça fresca — 350g", category: "Marmitas variadas", price: 14.75, description: "Massa al dente com ragu artesanal de linguiça fresca.", image: images.p8 },
+  { id: "kit-italia", name: "Kit La Mia Italia — 10 marmitinhas", category: "Kits marmitinhas", price: 145, description: "Desfrute do KIT La Mia Italia com 10 marmitinhas italianas variadas. Experimente fusilli, parmegiana, panqueca e mais. Garanta já o seu!", image: images.p1, badge: "Mais pedido" },
+  { id: "kit-fit", name: "Kit Fit Emagreça com Sabor — 16 marmitinhas", category: "Kits marmitinhas", price: 235, description: "Descubra o KIT FIT com 16 marmitinhas variadas, saudáveis e práticas. Emagreça com sabor e praticidade no seu dia a dia. Peça já o seu!", image: images.p2, badge: "Fit" },
+  { id: "kit-dia", name: "Kit Dia a Dia — 30 marmitinhas", category: "Kits marmitinhas", price: 440, description: "Aproveite o KIT Dia a Dia com 30 marmitinhas variadas, práticas e saudáveis. Solução ideal para refeições rápidas. Garanta já o seu!", image: images.p3, badge: "Frete grátis" },
+  { id: "kit-mais", name: "Kit As Mais Pedidas — 20 marmitinhas", category: "Kits marmitinhas", price: 290, description: "Aproveite o KIT Mais Pedidas com 20 marmitinhas deliciosas. Praticidade e variedade para suas refeições. Garanta já o seu!", image: images.p4 },
+  { id: "strogonoff", name: "Strogonoff de frango — 350g", category: "Marmitas variadas", price: 14.75, description: "Strogonoff de frango cremoso com arroz e batatas sauté, pronto para aquecer. Experimente o sabor irresistível e praticidade em cada porção!", image: images.p5 },
+  { id: "frango-colorido", name: "Frango colorido — 350g", category: "Marmitas variadas", price: 14.75, description: "Experimente o Frango Colorido: filé de frango, legumes e arroz integral. Sabor, equilíbrio e praticidade. Peça já e desfrute de uma refeição saudável!", image: images.p6 },
+  { id: "parmegiana", name: "Filé de frango à parmegiana — 350g", category: "Marmitas variadas", price: 14.75, description: "Filé de frango à parmegiana com arroz branco, molho de tomate e queijo. Experimente esse clássico prático! Peça agora e aproveite o sabor.", image: images.p7 },
+  { id: "ragu", name: "Espaguete com ragu de linguiça fresca — 350g", category: "Marmitas variadas", price: 14.75, description: "Experimente o espaguete com ragu de linguiça fresca, molho rústico e sabor marcante. Pronto para aquecer! Peça já o seu.", image: images.p8 },
 ];
 
 const categories = ["Todos", "Marmitas variadas", "Marmitas fitness", "Vegetariano", "Kits marmitinhas", "Sopas e caldos"];
