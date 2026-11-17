@@ -4,15 +4,15 @@ import { Search, ShoppingBag, Menu, X, Plus, Minus, Trash2, ArrowRight, MapPin, 
 type Product = { id: string; name: string; category: string; price: number; description: string; image: string; badge?: string };
 
 const images = {
-  hero: "/manus-storage/async-images/Wqty53LX7Rgg4IHsMv7GkO/image-1.webp",
-  p1: "/manus-storage/async-images/Wqty53LX7Rgg4IHsMv7GkO/image-2.webp",
-  p2: "/manus-storage/async-images/Wqty53LX7Rgg4IHsMv7GkO/image-3.webp",
-  p3: "/manus-storage/async-images/Wqty53LX7Rgg4IHsMv7GkO/image-4.webp",
-  p4: "/manus-storage/async-images/Wqty53LX7Rgg4IHsMv7GkO/image-5.webp",
-  p5: "/manus-storage/async-images/IvntRuVTIS8ckKiZ9KR0Cm/image-1.webp",
-  p6: "/manus-storage/async-images/IvntRuVTIS8ckKiZ9KR0Cm/image-2.webp",
-  p7: "/manus-storage/async-images/IvntRuVTIS8ckKiZ9KR0Cm/image-3.webp",
-  p8: "/manus-storage/async-images/IvntRuVTIS8ckKiZ9KR0Cm/image-4.webp",
+  hero: "/images/hero.webp",
+  p1: "/images/kit-italia.webp",
+  p2: "/images/kit-fit.webp",
+  p3: "/images/kit-dia.webp",
+  p4: "/images/kit-mais.webp",
+  p5: "/images/strogonoff.webp",
+  p6: "/images/frango-colorido.webp",
+  p7: "/images/parmegiana.webp",
+  p8: "/images/ragu.webp",
 };
 
 const products: Product[] = [
