@@ -4,15 +4,15 @@ import { Search, ShoppingBag, Menu, X, Plus, Minus, Trash2, ArrowRight, MapPin, 
 type Product = { id: string; name: string; category: string; price: number; description: string; image: string; badge?: string };
 
 const images = {
-  hero: "https://acdn-us.mitiendanube.com/stores/006/854/176/themes/morelia/2-slide-1764267598356-4667402967-b7a826bb2bbb8cc7c48bdfbf111b5c5d1764267624-480-0.webp",
-  p1: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/33869b32eacd6b5ca710c9ed53b1b3c4-d06c96a0b36194f72517633873878522-480-0.webp",
-  p2: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/33514d32274ff30d38cbe2edd5ef337f-5ae61bcbc813064e9e17633872785005-480-0.webp",
-  p3: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/71765912eeac864814fdb1eb827bd42c-f35a1ebb4aea2b653217633872760714-480-0.webp",
-  p4: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/990e23bc0fe3219c4f769ef3dbd781ee-5c2bdd52586172cc2117633872736731-480-0.webp",
-  p5: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/6c820353f76f1fe2879562373b3a5998-35a55420182174cc5a17633874047475-480-0.webp",
-  p6: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/82f12f30242c78898912cfef7f48c491-8c170d149916ee2bd617633872615083-480-0.webp",
-  p7: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/995b67f7760b53483765ed09d9fcf151-4c9aa18b91401bb99317633872568540-480-0.webp",
-  p8: "https://acdn-us.mitiendanube.com/stores/006/854/176/products/5bd07e3d3bf5fd88d547c658abcaf196-3fdedad009b6be46df17633872477626-480-0.webp",
+  hero: "/manus-storage/async-images/Wqty53LX7Rgg4IHsMv7GkO/image-1.webp",
+  p1: "/manus-storage/async-images/Wqty53LX7Rgg4IHsMv7GkO/image-2.webp",
+  p2: "/manus-storage/async-images/Wqty53LX7Rgg4IHsMv7GkO/image-3.webp",
+  p3: "/manus-storage/async-images/Wqty53LX7Rgg4IHsMv7GkO/image-4.webp",
+  p4: "/manus-storage/async-images/Wqty53LX7Rgg4IHsMv7GkO/image-5.webp",
+  p5: "/manus-storage/async-images/IvntRuVTIS8ckKiZ9KR0Cm/image-1.webp",
+  p6: "/manus-storage/async-images/IvntRuVTIS8ckKiZ9KR0Cm/image-2.webp",
+  p7: "/manus-storage/async-images/IvntRuVTIS8ckKiZ9KR0Cm/image-3.webp",
+  p8: "/manus-storage/async-images/IvntRuVTIS8ckKiZ9KR0Cm/image-4.webp",
 };
 
 const products: Product[] = [
