@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Search, ShoppingBag, Menu, X, Plus, Minus, Trash2, ArrowRight, MapPin, CreditCard, Clock3, Truck, Leaf, Instagram, ChevronDown } from "lucide-react";
+import { Search, ShoppingBag, Menu, X, Plus, Minus, Trash2, ArrowRight, MapPin, CreditCard, Clock3, Truck, Instagram, ChevronDown } from "lucide-react";
 
 type Product = { id: string; name: string; category: string; price: number; description: string; image: string; badge?: string };
 
@@ -32,6 +32,7 @@ const money = (value: number) => value.toLocaleString("pt-BR", { style: "currenc
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("Todos");
   const [query, setQuery] = useState("");
+  const [priceFilter, setPriceFilter] = useState("all");
   const [cart, setCart] = useState<Record<string, number>>({});
   const [cartOpen, setCartOpen] = useState(false);
   const [checkoutOpen, setCheckoutOpen] = useState(false);
@@ -40,8 +41,9 @@ export default function Home() {
   const filtered = useMemo(() => products.filter((p) => {
     const matchesCategory = activeCategory === "Todos" || p.category === activeCategory;
     const matchesQuery = p.name.toLowerCase().includes(query.toLowerCase()) || p.description.toLowerCase().includes(query.toLowerCase());
-    return matchesCategory && matchesQuery;
-  }), [activeCategory, query]);
+    const matchesPrice = priceFilter === "all" || (priceFilter === "under50" && p.price < 50) || (priceFilter === "under250" && p.price <= 250) || (priceFilter === "over250" && p.price > 250);
+    return matchesCategory && matchesQuery && matchesPrice;
+  }), [activeCategory, query, priceFilter]);
 
   const cartItems = products.filter((p) => cart[p.id]);
   const cartCount = Object.values(cart).reduce((sum, n) => sum + n, 0);
@@ -54,7 +56,7 @@ export default function Home() {
       <div className="topline">Frete grátis nas compras acima de R$ 345,00 <span>·</span> Aqueça de 5 a 6 min no micro-ondas <span>·</span> Pague com PIX, cartão, VR ou VA</div>
       <header className="header">
         <a className="brand" href="#inicio" aria-label="Maria's Gastronomia Moderna">
-          <span className="brand-mark"><Leaf size={22} strokeWidth={1.8} /><span>M</span></span>
+          <img className="brand-logo" src="/marias-mark.svg" alt="" />
           <span><strong>Maria's</strong><small>GASTRONOMIA MODERNA</small></span>
         </a>
         <nav className={mobileMenu ? "nav open" : "nav"}>
@@ -92,7 +94,7 @@ export default function Home() {
         <section className="intro" id="nossa-cozinha"><div><p className="eyebrow">A COZINHA DA MARIA</p><h2>Comida gostosa<br /><em>simplifica</em> a vida.</h2></div><p>Da nossa cozinha para a sua mesa: pratos ultracongelados com tempero caseiro, montados para caber na sua rotina e lembrar que comer bem pode ser simples.</p></section>
 
         <section className="catalog-section" id="cardapio">
-          <div className="section-heading"><div><p className="eyebrow">PARA TODOS OS DIAS</p><h2>Escolha seu próximo<br /><em>momento gostoso.</em></h2></div><div className="search-box"><Search size={18} /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Buscar no cardápio" /></div></div>
+          <div className="section-heading"><div><p className="eyebrow">PARA TODOS OS DIAS</p><h2>Escolha seu próximo<br /><em>momento gostoso.</em></h2></div><div className="catalog-filters"><div className="search-box"><Search size={18} /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Buscar no cardápio" /></div><label className="price-filter"><span>Preço</span><select value={priceFilter} onChange={(e) => setPriceFilter(e.target.value)}><option value="all">Todos</option><option value="under50">Até R$ 50</option><option value="under250">Até R$ 250</option><option value="over250">Acima de R$ 250</option></select><ChevronDown size={14} /></label></div></div>
           <div className="category-row">{categories.map((category) => <button key={category} className={activeCategory === category ? "category active" : "category"} onClick={() => setActiveCategory(category)}>{category}</button>)}</div>
           <div className="product-grid">{filtered.map((product) => <article className="product-card" key={product.id}><div className="product-image"><img src={product.image} alt={product.name} />{product.badge && <span className="badge">{product.badge}</span>}<button className="add-float" onClick={() => addToCart(product.id)} aria-label={`Adicionar ${product.name}`}><Plus size={19} /></button></div><div className="product-info"><p className="product-category">{product.category}</p><h3>{product.name}</h3><p className="product-description">{product.description}</p><div className="product-bottom"><strong>{money(product.price)}</strong><button onClick={() => addToCart(product.id)}>Adicionar</button></div></div></article>)}</div>
           {filtered.length === 0 && <div className="empty-state">Nenhum prato encontrado. Tente outra busca ou categoria.</div>}
@@ -103,7 +105,7 @@ export default function Home() {
         <section className="newsletter" id="contato"><div><p className="eyebrow">FICA POR PERTO</p><h2>Novidades gostosas<br />na sua caixa de entrada.</h2></div><form onSubmit={(e) => e.preventDefault()}><input type="email" placeholder="Seu melhor e-mail" aria-label="Seu melhor e-mail" /><button type="submit">Quero receber <ArrowRight size={17} /></button></form></section>
       </main>
 
-      <footer className="footer"><div className="footer-brand"><a className="brand" href="#inicio"><span className="brand-mark"><Leaf size={22} strokeWidth={1.8} /><span>M</span></span><span><strong>Maria's</strong><small>GASTRONOMIA MODERNA</small></span></a><p>Comida afetiva para a vida real.</p></div><div><p className="footer-title">Navegue</p><a href="#cardapio">Cardápio</a><a href="#kits">Kits</a><a href="#nossa-cozinha">Nossa cozinha</a></div><div><p className="footer-title">Fale com a gente</p><a href="https://wa.me/5511914162432">(11) 91416-2432</a><a href="mailto:oi@mariasgastronomia.com.br">oi@mariasgastronomia.com.br</a><a href="#contato">Instagram <Instagram size={14} /></a></div><div><p className="footer-title">Do seu jeito</p><p>Crédito, débito, PIX,<br />VR e VA.</p></div><div className="footer-bottom">© 2026 Maria's Gastronomia Moderna <span>Feito para comer bem.</span></div></footer>
+      <footer className="footer"><div className="footer-brand"><a className="brand" href="#inicio"><img className="brand-logo" src="/marias-mark.svg" alt="" /><span><strong>Maria's</strong><small>GASTRONOMIA MODERNA</small></span></a><p>Comida afetiva para a vida real.</p></div><div><p className="footer-title">Navegue</p><a href="#cardapio">Cardápio</a><a href="#kits">Kits</a><a href="#nossa-cozinha">Nossa cozinha</a></div><div><p className="footer-title">Fale com a gente</p><a href="https://wa.me/5511914162432">(11) 91416-2432</a><a href="mailto:oi@mariasgastronomia.com.br">oi@mariasgastronomia.com.br</a><a href="#contato">Instagram <Instagram size={14} /></a></div><div><p className="footer-title">Do seu jeito</p><p>Crédito, débito, PIX,<br />VR e VA.</p></div><div className="footer-bottom">© 2026 Maria's Gastronomia Moderna <span>Feito para comer bem.</span></div></footer>
 
       {cartOpen && <div className="drawer-overlay" onClick={() => setCartOpen(false)}><aside className="cart-drawer" onClick={(e) => e.stopPropagation()}><div className="drawer-header"><div><p className="eyebrow">SEU PEDIDO</p><h2>Sacola <span>({cartCount})</span></h2></div><button className="close-button" onClick={() => setCartOpen(false)}><X /></button></div>{cartItems.length === 0 ? <div className="cart-empty"><ShoppingBag size={34} /><p>Sua sacola está esperando por algo gostoso.</p><button className="primary-button" onClick={() => setCartOpen(false)}>Ver cardápio</button></div> : <><div className="cart-items">{cartItems.map((p) => <div className="cart-item" key={p.id}><img src={p.image} alt="" /><div><h3>{p.name}</h3><strong>{money(p.price)}</strong><div className="qty"><button onClick={() => changeQty(p.id, -1)}><Minus size={13} /></button><span>{cart[p.id]}</span><button onClick={() => changeQty(p.id, 1)}><Plus size={13} /></button><button className="remove" onClick={() => changeQty(p.id, -cart[p.id])}><Trash2 size={14} /></button></div></div></div>)}</div><div className="cart-summary"><div><span>Subtotal</span><strong>{money(subtotal)}</strong></div><small>Frete calculado no checkout.</small><button className="primary-button full" onClick={() => { setCartOpen(false); setCheckoutOpen(true); }}>Continuar para checkout <ArrowRight size={17} /></button></div></>}</aside></div>}
       {checkoutOpen && <div className="modal-overlay" onClick={() => setCheckoutOpen(false)}><div className="checkout-modal" onClick={(e) => e.stopPropagation()}><button className="close-button" onClick={() => setCheckoutOpen(false)}><X /></button><p className="eyebrow">ÚLTIMO PASSO</p><h2>Vamos finalizar<br /><em>seu pedido.</em></h2><div className="checkout-grid"><label>Seu nome<input placeholder="Como podemos te chamar?" /></label><label>WhatsApp<input placeholder="(11) 00000-0000" /></label><label className="wide">Endereço de entrega<input placeholder="Rua, número, complemento" /></label><label>Forma de pagamento<select defaultValue=""><option value="" disabled>Escolha uma opção</option><option>PIX</option><option>Cartão de crédito</option><option>VR / VA</option></select><ChevronDown size={15} /></label></div><div className="checkout-total"><span>Total do pedido</span><strong>{money(subtotal)}</strong></div><button className="primary-button full" onClick={() => setCheckoutOpen(false)}>Enviar pedido <ArrowRight size={17} /></button><p className="secure-note">Seu pedido será confirmado pelo WhatsApp.</p></div></div>}
