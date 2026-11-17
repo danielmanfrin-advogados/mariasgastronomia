@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mariasgastronomia.vercel.app/sitemap.xml

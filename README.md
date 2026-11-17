@@ -1,14 +1,22 @@
 # Maria's Gastronomia Moderna
 
-React / Express / tRPC / Drizzle starter, adapted from the Sandbox web-db-user template.
+Site em HTML puro, sem etapa de build. O que está na raiz do repositório é o que vai ao ar.
 
-- `pnpm dev`: development server; honors `PORT` (default 3000).
-- `pnpm build` / `pnpm start`: build and serve `dist/index.js` and `dist/public/`.
-- `pnpm db:migrate`: apply checked-in migrations. `pnpm db:push`: generate and apply new schema changes.
-- `pnpm check` / `pnpm test`: types and application tests.
+## Arquivos do site
 
-Start with the Webdev skill's default-template guide. Platform login, storage, payments and service contracts live in its shared references; read the relevant capability before extending its helper.
+- `index.html`: a página inicial, com todo o conteúdo (cardápio, textos, preços) escrito direto no HTML.
+- `styles.css`: aparência.
+- `app.js`: busca, filtros, sacola, checkout e registro de cliques.
+- `404.html`: página mostrada quando o endereço não existe.
+- `robots.txt` e `sitemap.xml`: orientações para o Google.
+- `googledeb63b46b132aa54.html`: arquivo de verificação do Google Search Console. Não apagar, não renomear.
+- `images/`, `*.webp`, `*.png`, `favicon.ico`: imagens e ícones.
 
-`server/_core/publicConfig.ts` exposes only named public runtime values. Private keys stay server-side. The platform serves managed `/manus-storage/` assets; the application does not register a second proxy.
+## Como alterar
 
-Platform configuration is readable and editable through `webdev.config`. Default settings are initial values, not enforced constraints. The agent may modify the files, commands and configuration or follow the flexible guide for another stack.
+- Texto, preço ou produto: edite o `index.html`. Cada produto é um bloco `<article class="product-card">`; o preço aparece no texto e no atributo `data-price`.
+- Domínio: se o site passar a usar um domínio próprio, troque `https://mariasgastronomia.vercel.app` por ele em `index.html` (canonical, og:url, og:image, dados estruturados), `robots.txt` e `sitemap.xml`.
+
+## Pasta react-original
+
+Guarda a versão anterior (React, Express, tRPC), mantida só como arquivo. Não é publicada (veja `.vercelignore`).
