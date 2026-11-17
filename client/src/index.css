@@ -9,3 +9,12 @@
 
 /* Logo oficial enviado pela marca */
 .full-logo{display:block;width:158px;height:auto;max-height:58px;object-fit:contain;object-position:center}.header .brand{display:flex;align-items:center;min-width:158px}.footer-logo{width:190px;max-height:86px;margin-bottom:12px}.drawer-brand{display:flex;flex-direction:column;gap:12px}.drawer-logo{display:block;width:132px;height:auto;max-height:72px;object-fit:contain;object-position:left center}.checkout-logo{display:block;width:180px;height:auto;max-height:88px;object-fit:contain;object-position:left center;margin-bottom:22px}@media(max-width:600px){.full-logo{width:130px;max-height:50px}.header .brand{min-width:130px}.footer-logo{width:170px}.drawer-logo{width:120px}.checkout-logo{width:155px}}
+
+/* Ajuste solicitado: logo maior, com fundo branco */
+.header{min-height:78px}
+.full-logo{width:190px;height:78px;max-height:none;padding:4px 8px;background:#fff;object-fit:contain;object-position:center}
+.header .brand{min-width:190px}
+.footer-logo{width:250px;height:112px;max-height:none;padding:6px 10px;background:#fff;object-fit:contain}
+.drawer-logo{width:175px;height:96px;max-height:none;padding:5px 8px;background:#fff;object-fit:contain}
+.checkout-logo{width:230px;height:112px;max-height:none;padding:6px 10px;background:#fff;object-fit:contain}
+@media(max-width:600px){.header{min-height:66px}.full-logo{width:148px;height:62px}.header .brand{min-width:148px}.footer-logo{width:205px;height:92px}.drawer-logo{width:150px;height:84px}.checkout-logo{width:190px;height:94px}}
