@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mariasgastronomia.vercel.app/</loc>
-    <lastmod>2026-11-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://mariasgastronomia.vercel.app/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mariasgastronomia.vercel.app/produtos/espaguete-com-ragu-de-linguica-fresca-350g/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mariasgastronomia.vercel.app/produtos/file-de-frango-a-parmegiana-350g/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mariasgastronomia.vercel.app/produtos/frango-colorido-350g/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mariasgastronomia.vercel.app/produtos/kit-as-mais-pedidas-20-marmitinhas/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mariasgastronomia.vercel.app/produtos/kit-dia-a-dia-30-marmitinhas/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mariasgastronomia.vercel.app/produtos/kit-fit-emagreca-com-sabor-16-marmitinhas/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mariasgastronomia.vercel.app/produtos/kit-la-mia-italia-10-marmitinhas/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mariasgastronomia.vercel.app/produtos/strogonoff-de-frango-350g/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>

@@ -3,8 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maria&#x27;s Gastronomia Moderna | Marmitas e kits congelados</title>
-  <meta name="description" content="Marmitinhas ultracongeladas com tempero caseiro, prontas em 5 a 6 min. Kits práticos com entrega em Ribeirão Preto - SP. Pague com PIX, cartão, VR ou VA.">
+  <title>Marmitas congeladas em Ribeirão Preto | Maria's Gastronomia</title>
+  <meta name="description" content="Marmitas congeladas e kits de marmitinhas em Ribeirão Preto, com tempero caseiro, preparo em 5 a 6 min e entrega especial.">
+  <meta name="keywords" content="marmitas congeladas Ribeirão Preto, marmitinhas congeladas, kits de marmitas, comida caseira, refeições prontas, marmitas fitness, entrega de marmitas, Maria's Gastronomia">
+  <meta name="author" content="Maria's Gastronomia Moderna">
+  <meta name="geo.region" content="BR-SP">
+  <meta name="geo.placename" content="Ribeirão Preto">
+  <link rel="alternate" hreflang="pt-br" href="https://mariasgastronomia.vercel.app/">
   <link rel="canonical" href="https://mariasgastronomia.vercel.app/">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#526653">
@@ -16,16 +21,16 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Maria's Gastronomia Moderna">
-  <meta property="og:title" content="Maria&#x27;s Gastronomia Moderna | Marmitas e kits congelados">
-  <meta property="og:description" content="Marmitinhas ultracongeladas com tempero caseiro, prontas em 5 a 6 min. Kits práticos com entrega em Ribeirão Preto - SP. Pague com PIX, cartão, VR ou VA.">
+  <meta property="og:title" content="Marmitas congeladas em Ribeirão Preto | Maria's Gastronomia">
+  <meta property="og:description" content="Marmitas congeladas e kits de marmitinhas em Ribeirão Preto, com tempero caseiro, preparo em 5 a 6 min e entrega especial.">
   <meta property="og:url" content="https://mariasgastronomia.vercel.app/">
   <meta property="og:image" content="https://mariasgastronomia.vercel.app/images/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Marmitinhas artesanais Maria's">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Maria&#x27;s Gastronomia Moderna | Marmitas e kits congelados">
-  <meta name="twitter:description" content="Marmitinhas ultracongeladas com tempero caseiro, prontas em 5 a 6 min. Kits práticos com entrega em Ribeirão Preto - SP. Pague com PIX, cartão, VR ou VA.">
+  <meta name="twitter:title" content="Marmitas congeladas em Ribeirão Preto | Maria's Gastronomia">
+  <meta name="twitter:description" content="Marmitas congeladas e kits de marmitinhas em Ribeirão Preto, com tempero caseiro, preparo em 5 a 6 min e entrega especial.">
   <meta name="twitter:image" content="https://mariasgastronomia.vercel.app/images/og.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,17 +44,24 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://mariasgastronomia.vercel.app/#org",
+      "@type": "FoodEstablishment",
+      "@id": "https://mariasgastronomia.vercel.app/#business",
       "name": "Maria's Gastronomia Moderna",
       "url": "https://mariasgastronomia.vercel.app/",
       "logo": "https://mariasgastronomia.vercel.app/marias-logo-cropped.webp",
-      "email": "oi@mariasgastronomia.com.br",
+      "email": "contato@mariasgastronomia.com.br",
       "telephone": "+5516996214100",
+      "description": "Marmitas congeladas, marmitinhas ultracongeladas e kits de refeições prontas com tempero caseiro.",
+      "servesCuisine": ["Comida caseira", "Brasileira", "Italiana", "Fitness"],
+      "priceRange": "R$ 14,75 - R$ 440,00",
+      "currenciesAccepted": "BRL",
+      "paymentAccepted": "PIX, cartão, VR e VA",
       "areaServed": {
         "@type": "City",
-        "name": "Ribeirão Preto"
-      }
+        "name": "Ribeirão Preto",
+        "containedInPlace": {"@type": "State", "name": "São Paulo"}
+      },
+      "contactPoint": {"@type":"ContactPoint","telephone":"+5516996214100","contactType":"customer service","availableLanguage":"pt-BR"}
     },
     {
       "@type": "WebSite",
@@ -58,8 +70,64 @@
       "name": "Maria's Gastronomia Moderna",
       "inLanguage": "pt-BR",
       "publisher": {
-        "@id": "https://mariasgastronomia.vercel.app/#org"
+        "@id": "https://mariasgastronomia.vercel.app/#business"
       }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://mariasgastronomia.vercel.app/#catalogo",
+      "name": "Cardápio de marmitas congeladas e kits",
+      "numberOfItems": 8,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Espaguete com ragu de linguiça fresca — 350g",
+          "url": "https://mariasgastronomia.vercel.app/produtos/espaguete-com-ragu-de-linguica-fresca-350g/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Filé de frango à parmegiana — 350g",
+          "url": "https://mariasgastronomia.vercel.app/produtos/file-de-frango-a-parmegiana-350g/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Frango colorido — 350g",
+          "url": "https://mariasgastronomia.vercel.app/produtos/frango-colorido-350g/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Kit As Mais Pedidas — 20 marmitinhas",
+          "url": "https://mariasgastronomia.vercel.app/produtos/kit-as-mais-pedidas-20-marmitinhas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Kit Dia a Dia — 30 marmitinhas",
+          "url": "https://mariasgastronomia.vercel.app/produtos/kit-dia-a-dia-30-marmitinhas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Kit Fit Emagreça com Sabor — 16 marmitinhas",
+          "url": "https://mariasgastronomia.vercel.app/produtos/kit-fit-emagreca-com-sabor-16-marmitinhas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Kit La Mia Italia — 10 marmitinhas",
+          "url": "https://mariasgastronomia.vercel.app/produtos/kit-la-mia-italia-10-marmitinhas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Strogonoff de frango — 350g",
+          "url": "https://mariasgastronomia.vercel.app/produtos/strogonoff-de-frango-350g/"
+        }
+      ]
     },
     {
       "@type": "Product",
@@ -73,7 +141,7 @@
         "priceCurrency": "BRL",
         "url": "https://mariasgastronomia.vercel.app/#produto-kit-italia",
         "seller": {
-          "@id": "https://mariasgastronomia.vercel.app/#org"
+          "@id": "https://mariasgastronomia.vercel.app/#business"
         }
       }
     },
@@ -89,7 +157,7 @@
         "priceCurrency": "BRL",
         "url": "https://mariasgastronomia.vercel.app/#produto-kit-fit",
         "seller": {
-          "@id": "https://mariasgastronomia.vercel.app/#org"
+          "@id": "https://mariasgastronomia.vercel.app/#business"
         }
       }
     },
@@ -105,7 +173,7 @@
         "priceCurrency": "BRL",
         "url": "https://mariasgastronomia.vercel.app/#produto-kit-dia",
         "seller": {
-          "@id": "https://mariasgastronomia.vercel.app/#org"
+          "@id": "https://mariasgastronomia.vercel.app/#business"
         }
       }
     },
@@ -121,7 +189,7 @@
         "priceCurrency": "BRL",
         "url": "https://mariasgastronomia.vercel.app/#produto-kit-mais",
         "seller": {
-          "@id": "https://mariasgastronomia.vercel.app/#org"
+          "@id": "https://mariasgastronomia.vercel.app/#business"
         }
       }
     },
@@ -137,7 +205,7 @@
         "priceCurrency": "BRL",
         "url": "https://mariasgastronomia.vercel.app/#produto-strogonoff",
         "seller": {
-          "@id": "https://mariasgastronomia.vercel.app/#org"
+          "@id": "https://mariasgastronomia.vercel.app/#business"
         }
       }
     },
@@ -153,7 +221,7 @@
         "priceCurrency": "BRL",
         "url": "https://mariasgastronomia.vercel.app/#produto-frango-colorido",
         "seller": {
-          "@id": "https://mariasgastronomia.vercel.app/#org"
+          "@id": "https://mariasgastronomia.vercel.app/#business"
         }
       }
     },
@@ -169,7 +237,7 @@
         "priceCurrency": "BRL",
         "url": "https://mariasgastronomia.vercel.app/#produto-parmegiana",
         "seller": {
-          "@id": "https://mariasgastronomia.vercel.app/#org"
+          "@id": "https://mariasgastronomia.vercel.app/#business"
         }
       }
     },
@@ -185,7 +253,7 @@
         "priceCurrency": "BRL",
         "url": "https://mariasgastronomia.vercel.app/#produto-ragu",
         "seller": {
-          "@id": "https://mariasgastronomia.vercel.app/#org"
+          "@id": "https://mariasgastronomia.vercel.app/#business"
         }
       }
     }
@@ -234,7 +302,7 @@
 
       <section class="intro" id="nossa-cozinha">
         <div><p class="eyebrow">A COZINHA DA MARIA</p><h2>Comida gostosa<br><em>simplifica</em> a vida.</h2></div>
-        <p>Da nossa cozinha para a sua mesa: pratos ultracongelados com tempero caseiro, montados para caber na sua rotina e lembrar que comer bem pode ser simples.</p>
+        <p>Da nossa cozinha em Ribeirão Preto para a sua mesa: marmitas congeladas e pratos ultracongelados com tempero caseiro, montados para caber na sua rotina e lembrar que comer bem pode ser simples.</p>
       </section>
 
       <section class="catalog-section" id="cardapio">
