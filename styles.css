@@ -76,3 +76,11 @@ b,strong{font-weight:bolder}
 /* Correção final de contraste: botão de retorno sempre preenchido e legível */
 .product-detail-actions a.outline-button{background:#526653 !important;color:#fff !important;border:1px solid #526653 !important;text-shadow:none !important}
 .product-detail-actions a.outline-button:hover{background:#24302b !important;color:#fff !important;border-color:#24302b !important}
+/* Layout final das páginas de produto: duas colunas estáveis e empilhamento responsivo */
+.product-detail{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:start;min-width:0}
+.product-detail-media{width:100%;min-width:0;align-self:start;overflow:hidden}
+.product-detail-media img{display:block;width:100%;max-width:100%;height:auto;max-height:560px;object-fit:contain}
+.product-detail-copy{min-width:0;padding-top:18px}
+.product-detail-copy h1{overflow-wrap:anywhere}
+@media(max-width:900px){.product-detail{grid-template-columns:1fr;max-width:720px;gap:34px}.product-detail-media{max-width:620px;margin:0 auto}.product-detail-copy{padding-top:0}}
+@media(max-width:520px){.product-detail{padding-left:18px;padding-right:18px;padding-bottom:64px}.product-detail-copy h1{font-size:38px}.product-detail-actions{flex-direction:column;align-items:stretch}.product-detail-actions a{justify-content:center;text-align:center}}
