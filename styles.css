@@ -70,3 +70,6 @@ b,strong{font-weight:bolder}
 .product-detail-link:hover{color:var(--deep-sage)}
 .product-detail-link span{font-size:16px;line-height:1}
 .product-detail-media img{height:auto;aspect-ratio:auto;max-height:650px;object-fit:contain;background:#f1eee6}
+/* Contraste dos botões nas páginas individuais */
+.product-detail-actions .outline-button{border-color:var(--deep-sage);color:var(--deep-sage);background:var(--paper)}
+.product-detail-actions .outline-button:hover{background:var(--deep-sage);color:#fff}
