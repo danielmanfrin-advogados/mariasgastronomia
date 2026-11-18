@@ -73,3 +73,6 @@ b,strong{font-weight:bolder}
 /* Contraste dos botões nas páginas individuais */
 .product-detail-actions .outline-button{border-color:var(--deep-sage);color:var(--deep-sage);background:var(--paper)}
 .product-detail-actions .outline-button:hover{background:var(--deep-sage);color:#fff}
+/* Correção final de contraste: botão de retorno sempre preenchido e legível */
+.product-detail-actions a.outline-button{background:#526653 !important;color:#fff !important;border:1px solid #526653 !important;text-shadow:none !important}
+.product-detail-actions a.outline-button:hover{background:#24302b !important;color:#fff !important;border-color:#24302b !important}
